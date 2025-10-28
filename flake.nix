@@ -55,68 +55,77 @@
 
   outputs =
     inputs@{ flake-parts, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = import inputs.systems;
+    flake-parts.lib.mkFlake { inherit inputs; } (
+      { withSystem, flake-parts-lib, ... }:
+      let
+        inherit (flake-parts-lib) importApply;
+        flakeModules.default = importApply ./modules/flake { inherit withSystem; };
+      in
+      {
+        systems = import inputs.systems;
 
-      imports = [
-        # keep-sorted start
-        inputs.devshell.flakeModule
-        inputs.git-hooks.flakeModule
-        inputs.home-manager.flakeModules.home-manager
-        inputs.treefmt-nix.flakeModule
-        # keep-sorted end
-      ];
+        imports = [
+          flakeModules.default
+          # keep-sorted start
+          inputs.devshell.flakeModule
+          inputs.git-hooks.flakeModule
+          inputs.home-manager.flakeModules.home-manager
+          inputs.treefmt-nix.flakeModule
+          # keep-sorted end
+        ];
 
-      flake = {
-      };
-
-      perSystem =
-        { config, pkgs, ... }:
-        {
-          pre-commit = {
-            check.enable = true;
-            settings = {
-              src = ./.;
-              hooks = {
-                actionlint.enable = false;
-                treefmt.enable = true;
-              };
-            };
-          };
-          treefmt = {
-            projectRootFile = "flake.nix";
-            programs = {
-              # keep-sorted start
-              keep-sorted.enable = true;
-              nixfmt.enable = true;
-              shfmt.enable = true;
-              # keep-sorted end
-            };
-            settings = {
-              formatter = {
-                tombi = {
-                  command = pkgs.lib.getExe pkgs.tombi;
-                  options = [ "format" ];
-                  includes = [ "*.toml" ];
-                };
-                nixfmt = {
-                  excludes = [
-                    "**/node2nix/*.nix" # node2nix generated files
-                    "**/_sources/generated.nix" # nvfetcher generatee sources
-                  ];
-                };
-              };
-            };
-          };
-          devshells.default = {
-            devshell = {
-              startup = {
-                pre-commit = {
-                  text = config.pre-commit.installationScript;
-                };
-              };
-            };
-          };
+        flake = {
+          inherit flakeModules;
         };
-    };
+
+        perSystem =
+          { config, pkgs, ... }:
+          {
+            pre-commit = {
+              check.enable = true;
+              settings = {
+                src = ./.;
+                hooks = {
+                  actionlint.enable = false;
+                  treefmt.enable = true;
+                };
+              };
+            };
+            treefmt = {
+              projectRootFile = "flake.nix";
+              programs = {
+                # keep-sorted start
+                keep-sorted.enable = true;
+                nixfmt.enable = true;
+                shfmt.enable = true;
+                # keep-sorted end
+              };
+              settings = {
+                formatter = {
+                  tombi = {
+                    command = pkgs.lib.getExe pkgs.tombi;
+                    options = [ "format" ];
+                    includes = [ "*.toml" ];
+                  };
+                  nixfmt = {
+                    excludes = [
+                      "**/node2nix/*.nix" # node2nix generated files
+                      "**/_sources/generated.nix" # nvfetcher generatee sources
+                    ];
+                  };
+                };
+              };
+            };
+            devshells.default = {
+              devshell = {
+                startup = {
+                  pre-commit = {
+                    text = config.pre-commit.installationScript;
+                  };
+                };
+              };
+            };
+          };
+      }
+    );
 }

@@ -1,0 +1,128 @@
+{
+    "ddc-ui-pum": {
+        "cargoLocks": null,
+        "date": "2025-08-26",
+        "extract": null,
+        "name": "ddc-ui-pum",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-ui-pum",
+            "rev": "f7f334380e18af42297468b3cf696794bbfa2652",
+            "sha256": "sha256-kQ1fK65V0NtObqBy/FhcfACUGeI5Pk4t3Kw0BPpxChw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "f7f334380e18af42297468b3cf696794bbfa2652"
+    },
+    "ddc-vim": {
+        "cargoLocks": null,
+        "date": "2025-10-12",
+        "extract": null,
+        "name": "ddc-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc.vim",
+            "rev": "4f553b7f4e968971461820d05d3ff1601f9d7ab4",
+            "sha256": "sha256-3WGlkMTesV60DEPdnTFVW1sLf3NaNK3tRM6C2EJm4pw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "4f553b7f4e968971461820d05d3ff1601f9d7ab4"
+    },
+    "denops-vim": {
+        "cargoLocks": null,
+        "date": "2025-08-24",
+        "extract": null,
+        "name": "denops-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vim-denops",
+            "repo": "denops.vim",
+            "rev": "a278b8342459e4687f24d4d575d72ff593326cee",
+            "sha256": "sha256-JIRV9xfOqX6GLqBAeYqOePqaFWSyAr157958hBxmP8w=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "a278b8342459e4687f24d4d575d72ff593326cee"
+    },
+    "pum-vim": {
+        "cargoLocks": null,
+        "date": "2025-10-16",
+        "extract": null,
+        "name": "pum-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "pum.vim",
+            "rev": "08734d52b03c354151dda3bb75a37a0ee39bbe7e",
+            "sha256": "sha256-WuSq5+0Tj0VgmdSYNxnswU1gNG2lSdoePNuVuiNkIOY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "08734d52b03c354151dda3bb75a37a0ee39bbe7e"
+    },
+    "skk-dict": {
+        "cargoLocks": null,
+        "date": "2024-08-29",
+        "extract": null,
+        "name": "skk-dict",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "skk-dev",
+            "repo": "dict",
+            "rev": "4eb91a3bbfef70bde940668ec60f3beae291e971",
+            "sha256": "sha256-sWz85Q6Bu2WoKsckSp5SlcuPUQN2mcq+BHMqNXQ/aho=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "4eb91a3bbfef70bde940668ec60f3beae291e971"
+    },
+    "skkeleton": {
+        "cargoLocks": null,
+        "date": "2025-10-19",
+        "extract": null,
+        "name": "skkeleton",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vim-skk",
+            "repo": "skkeleton",
+            "rev": "0c67893ffe0448666ec76283bc0a9685ac31fba9",
+            "sha256": "sha256-6YRhQUANiYoSF5t4rV7kwU8essmUBNdejLumqR+tyTI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0c67893ffe0448666ec76283bc0a9685ac31fba9"
+    }
+}

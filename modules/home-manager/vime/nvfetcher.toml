@@ -1,0 +1,23 @@
+[denops-vim]
+src.git = "https://github.com/vim-denops/denops.vim.git"
+fetch.github = "vim-denops/denops.vim"
+
+[skkeleton]
+src.git = "https://github.com/vim-skk/skkeleton.git"
+fetch.github = "vim-skk/skkeleton"
+
+[skk-dict]
+src.git = "https://github.com/skk-dev/dict.git"
+fetch.github = "skk-dev/dict"
+
+[pum-vim]
+src.git = "https://github.com/Shougo/pum.vim.git"
+fetch.github = "Shougo/pum.vim"
+
+[ddc-vim]
+src.git = "https://github.com/Shougo/ddc.vim.git"
+fetch.github = "Shougo/ddc.vim"
+
+[ddc-ui-pum]
+src.git = "https://github.com/Shougo/ddc-ui-pum.git"
+fetch.github = "Shougo/ddc-ui-pum"

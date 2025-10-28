@@ -26,6 +26,12 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
@@ -49,13 +55,11 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import inputs.systems;
       imports = [
-        # To import an internal flake module: ./other.nix
-        # To import an external flake module:
-        #   1. Add foo to inputs
-        #   2. Add foo as a parameter to the outputs function
-        #   3. Add here: foo.flakeModule
+        # keep-sorted start
         inputs.git-hooks.flakeModule
+        inputs.home-manager.flakeModules.home-manager
         inputs.treefmt-nix.flakeModule
+        # keep-sorted end
       ];
       perSystem =
         {

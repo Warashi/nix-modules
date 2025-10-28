@@ -5,6 +5,9 @@
     # keep-sorted start block=yes
     devshell = {
       url = "github:numtide/devshell";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
     flake-compat = {
       url = "github:edolstra/flake-compat";

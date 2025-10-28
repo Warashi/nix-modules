@@ -3,6 +3,9 @@
 
   inputs = {
     # keep-sorted start block=yes
+    devshell = {
+      url = "github:numtide/devshell";
+    };
     flake-compat = {
       url = "github:edolstra/flake-compat";
     };
@@ -54,27 +57,22 @@
     inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import inputs.systems;
+
       imports = [
         # keep-sorted start
+        inputs.devshell.flakeModule
         inputs.git-hooks.flakeModule
         inputs.home-manager.flakeModules.home-manager
         inputs.treefmt-nix.flakeModule
         # keep-sorted end
       ];
-      perSystem =
-        {
-          config,
-          self',
-          inputs',
-          pkgs,
-          system,
-          ...
-        }:
-        {
-          # Per-system attributes can be defined here. The self' and inputs'
-          # module parameters provide easy access to attributes of the same
-          # system.
 
+      flake = {
+      };
+
+      perSystem =
+        { config, pkgs, ... }:
+        {
           pre-commit = {
             check.enable = true;
             settings = {
@@ -85,7 +83,6 @@
               };
             };
           };
-
           treefmt = {
             projectRootFile = "flake.nix";
             programs = {
@@ -111,21 +108,15 @@
               };
             };
           };
-
-          devShells.default = pkgs.mkShell {
-            packages = with pkgs; [
-              # keep-sorted start
-              # keep-sorted end
-            ];
-            shellHook = config.pre-commit.installationScript;
+          devshells.default = {
+            devshell = {
+              startup = {
+                pre-commit = {
+                  text = config.pre-commit.installationScript;
+                };
+              };
+            };
           };
         };
-
-      flake = {
-        # The usual flake attributes can be defined here, including system-
-        # agnostic ones like nixosModule and system-enumerating ones, although
-        # those are more easily expressed in perSystem.
-
-      };
     };
 }

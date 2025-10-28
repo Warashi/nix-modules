@@ -60,6 +60,9 @@
       let
         inherit (flake-parts-lib) importApply;
         flakeModules.default = importApply ./modules/flake { inherit withSystem; };
+        homeModules.default = ./modules/home-manager;
+        darwinModules.default = ./modules/nix-darwin;
+        nixosModules.default = ./modules/nixos;
       in
       {
         systems = import inputs.systems;
@@ -75,7 +78,12 @@
         ];
 
         flake = {
-          inherit flakeModules;
+          inherit
+            flakeModules
+            homeModules
+            darwinModules
+            nixosModules
+            ;
         };
 
         perSystem =

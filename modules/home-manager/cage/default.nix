@@ -36,17 +36,10 @@ in
       let
         wrap =
           target:
-          let
-            name = if target ? meta && target.meta ? mainProgram then target.meta.mainProgram else target.pname;
-          in
           pkgs.writeShellApplication {
-            inherit name;
-            runtimeInputs = [
-              target
-            ];
-            # we cannot use "${lib.getExe target}" because cage's auto-preset feature cannot handle full-path executables
+            name = if target ? meta && target.meta ? mainProgram then target.meta.mainProgram else target.pname;
             text = ''
-              exec "${lib.getExe cfg.package}" -- "${name}" "$@"
+              exec "${lib.getExe cfg.package}" -- "${lib.getExe target}" "$@"
             '';
           };
         wrapped = builtins.map wrap cfg.wrappedPackages;

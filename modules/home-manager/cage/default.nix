@@ -37,7 +37,7 @@ in
         wrap =
           target:
           pkgs.writeShellApplication {
-            name = target.pname;
+            name = if target ? meta && target.meta ? mainProgram then target.meta.mainProgram else target.pname;
             text = ''
               exec "${lib.getExe cfg.package}" -- "${lib.getExe target}" "$@"
             '';

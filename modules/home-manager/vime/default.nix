@@ -54,8 +54,8 @@ let
   vim-as-ime = pkgs.writeShellApplication {
     name = "vime";
     runtimeInputs = [
+      pkgs.coreutils
       pkgs.neovim
-      pkgs.mktemp
     ];
     text = ''
       clip="$(mktemp /tmp/clip.XXXXXX.md)"

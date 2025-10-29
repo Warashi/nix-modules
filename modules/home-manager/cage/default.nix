@@ -38,14 +38,11 @@ in
           target:
           pkgs.writeShellApplication {
             name = target.pname;
-            runtimeInputs = [
-              cfg.package
-            ];
             text = ''
               exec "${lib.getExe cfg.package}" -- "${lib.getExe target}" "$@"
             '';
           };
-        wrapped = wrap cfg.package;
+        wrapped = builtins.map wrap cfg.wrappedPackages;
       in
       [ cfg.package ] ++ wrapped;
 

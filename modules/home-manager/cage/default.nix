@@ -49,6 +49,6 @@ in
       in
       [ cfg.package ] ++ wrapped;
 
-    xdg.conifgFile."cage/presets.yaml".text = toYAML.generate "cage-presets-yaml" cfg.config;
+    xdg.configFile."cage/presets.yaml".text = toYAML.generate "cage-presets-yaml" cfg.config;
   };
 }

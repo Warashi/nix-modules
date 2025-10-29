@@ -71,7 +71,7 @@
         systems = import inputs.systems;
 
         imports = [
-          # flakeModules.default
+          flakeModules.default
           # keep-sorted start
           inputs.devshell.flakeModule
           inputs.git-hooks.flakeModule
@@ -84,7 +84,7 @@
           inherit
             flakeModules
             homeModules
-            # darwinModules
+            darwinModules
             nixosModules
             ;
         };

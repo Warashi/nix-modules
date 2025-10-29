@@ -110,7 +110,7 @@ in
             # Optional parameters:
             # @raycast.icon 🤖
 
-            open -na Alacritty.app --wait-apps --args --command "${lib.getExe vime-tmux-session}"
+            open -a Alacritty.app --wait-apps --args --command "${lib.getExe vime-tmux-session}"
           '';
         };
       };

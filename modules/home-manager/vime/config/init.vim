@@ -16,6 +16,23 @@ function s:skkeleton_initialize()
   call skkeleton#config(#{
   \   globalDictionaries: ['@skk_jisyo_l@'],
   \ })
+
+  call skkeleton_state_popup#config(#{
+  \   labels: {
+  \     'input': #{hira: "あ", kata: 'ア', hankata: 'ｶﾅ', zenkaku: 'Ａ'},
+  \     'input:okurinasi': #{hira: '▽▽', kata: '▽▽', hankata: '▽▽', abbrev: 'ab'},
+  \     'input:okuriari': #{hira: '▽▽', kata: '▽▽', hankata: '▽▽'},
+  \     'henkan': #{hira: '▼▼', kata: '▼▼', hankata: '▼▼', abbrev: 'ab'},
+  \     'latin': '_A',
+  \   },
+  \   opts: #{relative: 'cursor', col: 0, row: 1, anchor: 'NW', style: 'minimal'},
+  \ })
+  call skkeleton_state_popup#enable()
+
+  highlight SkkeletonHenkan
+  \   gui=underline term=underline cterm=underline
+  highlight SkkeletonHenkanSelect
+  \   gui=underline,reverse term=underline,reverse cterm=underline,reverse
 endfunction
 
 inoremap <C-j> <Plug>(skkeleton-enable)

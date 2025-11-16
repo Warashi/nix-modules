@@ -22,7 +22,7 @@
     },
     "ddc-vim": {
         "cargoLocks": null,
-        "date": "2025-10-12",
+        "date": "2025-11-16",
         "extract": null,
         "name": "ddc-vim",
         "passthru": null,
@@ -34,16 +34,16 @@
             "name": null,
             "owner": "Shougo",
             "repo": "ddc.vim",
-            "rev": "4f553b7f4e968971461820d05d3ff1601f9d7ab4",
-            "sha256": "sha256-3WGlkMTesV60DEPdnTFVW1sLf3NaNK3tRM6C2EJm4pw=",
+            "rev": "ef527ad60b199b11d022a648a24ab6d424227943",
+            "sha256": "sha256-Gp6xenZrXPl2UZ1W5yFvolWUW/rWzxGyVDY8lVcA0WA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "4f553b7f4e968971461820d05d3ff1601f9d7ab4"
+        "version": "ef527ad60b199b11d022a648a24ab6d424227943"
     },
     "denops-vim": {
         "cargoLocks": null,
-        "date": "2025-08-24",
+        "date": "2025-10-26",
         "extract": null,
         "name": "denops-vim",
         "passthru": null,
@@ -55,16 +55,16 @@
             "name": null,
             "owner": "vim-denops",
             "repo": "denops.vim",
-            "rev": "a278b8342459e4687f24d4d575d72ff593326cee",
-            "sha256": "sha256-JIRV9xfOqX6GLqBAeYqOePqaFWSyAr157958hBxmP8w=",
+            "rev": "5cfca39988a36e42d81b925264fc846077a727e3",
+            "sha256": "sha256-4AACZ3h6uAqiXW24gUF1+uq7dnWA0w/PcxAeO4yxitc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "a278b8342459e4687f24d4d575d72ff593326cee"
+        "version": "5cfca39988a36e42d81b925264fc846077a727e3"
     },
     "pum-vim": {
         "cargoLocks": null,
-        "date": "2025-10-16",
+        "date": "2025-11-10",
         "extract": null,
         "name": "pum-vim",
         "passthru": null,
@@ -76,12 +76,12 @@
             "name": null,
             "owner": "Shougo",
             "repo": "pum.vim",
-            "rev": "08734d52b03c354151dda3bb75a37a0ee39bbe7e",
-            "sha256": "sha256-WuSq5+0Tj0VgmdSYNxnswU1gNG2lSdoePNuVuiNkIOY=",
+            "rev": "fed31b9f117e4c10332c30108152a935496bc3b5",
+            "sha256": "sha256-hOUvq4hXlj7fxaJ/8ng3vEH2t0NrnWKuCqr7TwfD28c=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "08734d52b03c354151dda3bb75a37a0ee39bbe7e"
+        "version": "fed31b9f117e4c10332c30108152a935496bc3b5"
     },
     "skk-dict": {
         "cargoLocks": null,
@@ -106,7 +106,7 @@
     },
     "skkeleton": {
         "cargoLocks": null,
-        "date": "2025-10-19",
+        "date": "2025-10-27",
         "extract": null,
         "name": "skkeleton",
         "passthru": null,
@@ -118,11 +118,53 @@
             "name": null,
             "owner": "vim-skk",
             "repo": "skkeleton",
-            "rev": "0c67893ffe0448666ec76283bc0a9685ac31fba9",
-            "sha256": "sha256-6YRhQUANiYoSF5t4rV7kwU8essmUBNdejLumqR+tyTI=",
+            "rev": "71178b6debd9f1b3bb00abfd865ca642e82e24c7",
+            "sha256": "sha256-833WpBi0X6MhblLda1cp6dFU2zu+TYBgimlsBX+3rQo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0c67893ffe0448666ec76283bc0a9685ac31fba9"
+        "version": "71178b6debd9f1b3bb00abfd865ca642e82e24c7"
+    },
+    "skkeleton-henkan-highlight": {
+        "cargoLocks": null,
+        "date": "2025-11-02",
+        "extract": null,
+        "name": "skkeleton-henkan-highlight",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "NI57721",
+            "repo": "skkeleton-henkan-highlight",
+            "rev": "3f8d6d6d20a2397827138dbde7fa531bb487d849",
+            "sha256": "sha256-K5quESFM+5NZstbRgIIsfpXzBtnGJOQBF0SJiDi18jc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "3f8d6d6d20a2397827138dbde7fa531bb487d849"
+    },
+    "skkeleton-state-popup": {
+        "cargoLocks": null,
+        "date": "2025-11-05",
+        "extract": null,
+        "name": "skkeleton-state-popup",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "NI57721",
+            "repo": "skkeleton-state-popup",
+            "rev": "2a72e33c47cc8762517d479c28f0deedde8b6794",
+            "sha256": "sha256-Zamd5GlFHpPrSiWVx3xK5EeUU8ZoEQf82yoBjQ7ypaM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "2a72e33c47cc8762517d479c28f0deedde8b6794"
     }
 }

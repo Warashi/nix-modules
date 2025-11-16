@@ -15,6 +15,8 @@ set runtimepath^=@merged_plugins@
 function s:skkeleton_initialize()
   call skkeleton#config(#{
   \   globalDictionaries: ['@skk_jisyo_l@'],
+  \   markerHenkan: '',
+  \   markerHenkanSelect: '',
   \ })
 
   call skkeleton_state_popup#config(#{

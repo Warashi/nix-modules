@@ -62,7 +62,8 @@ let
       trap 'rm -f $clip' EXIT
       nvim -u ${vimrc} "$clip"
       if [[ -s "$clip" ]]; then
-        pbcopy < "$clip"
+        # Remove trailing newline and copy to clipboard
+        head -c -1 "$clip" | pbcopy
       fi
     '';
   };

@@ -17,16 +17,9 @@ let
     };
     merged_plugins = pkgs.symlinkJoin {
       name = "nvim-plugins";
-      paths =
-        (lib.filter (x: x != null) (
-          builtins.map (s: if s ? src then s.src else null) (lib.attrsets.attrValues sources)
-        ))
-        ++ (
-          let
-            ts = pkgs.vimPlugins.nvim-treesitter;
-          in
-          [ ts ] ++ ts.withAllGrammars.dependencies
-        );
+      paths = lib.filter (x: x != null) (
+        builtins.map (s: if s ? src then s.src else null) (lib.attrsets.attrValues sources)
+      );
       postBuild = ''
         rm -f $out/deno.json $out/deno.jsonc
       '';

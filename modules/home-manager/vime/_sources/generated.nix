@@ -63,27 +63,27 @@
   };
   skkeleton = {
     pname = "skkeleton";
-    version = "71178b6debd9f1b3bb00abfd865ca642e82e24c7";
+    version = "d2214e6d40fe4613f8e962e9086a4ae01fe8d088";
     src = fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-      rev = "71178b6debd9f1b3bb00abfd865ca642e82e24c7";
+      rev = "d2214e6d40fe4613f8e962e9086a4ae01fe8d088";
       fetchSubmodules = false;
-      sha256 = "sha256-833WpBi0X6MhblLda1cp6dFU2zu+TYBgimlsBX+3rQo=";
+      sha256 = "sha256-Q632wC8tuG0OO0zkpy3J4kpA1zEhO8eN+KIj1clVrvA=";
     };
-    date = "2025-10-27";
+    date = "2025-12-15";
   };
   skkeleton-henkan-highlight = {
     pname = "skkeleton-henkan-highlight";
-    version = "3f8d6d6d20a2397827138dbde7fa531bb487d849";
+    version = "361ca90537e9cf7cd404899a4ed0bbef03124fd8";
     src = fetchFromGitHub {
       owner = "NI57721";
       repo = "skkeleton-henkan-highlight";
-      rev = "3f8d6d6d20a2397827138dbde7fa531bb487d849";
+      rev = "361ca90537e9cf7cd404899a4ed0bbef03124fd8";
       fetchSubmodules = false;
-      sha256 = "sha256-K5quESFM+5NZstbRgIIsfpXzBtnGJOQBF0SJiDi18jc=";
+      sha256 = "sha256-haDXPCyOkK4F0LMNR8yU+nL87hijwON1QpjmsJtv7gE=";
     };
-    date = "2025-11-02";
+    date = "2025-12-11";
   };
   skkeleton-state-popup = {
     pname = "skkeleton-state-popup";
